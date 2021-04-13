@@ -8,16 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "TextureButton",
+"class": "Card",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card.gd"
+} ]
 _global_script_class_icons={
-
+"Card": ""
 }
 
 [application]
 
-config/name="PNJCrea"
-run/main_scene="res://Scene/Main.tscn"
+config/name="Cards"
+run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1200
+window/size/height=700
 
 [rendering]
 
