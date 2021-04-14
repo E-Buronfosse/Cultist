@@ -11,15 +11,15 @@ scale = Vector2( 1.0105, 1.04925 )
 texture = ExtResource( 1 )
 
 [node name="Launch_button" parent="Background" instance=ExtResource( 2 )]
-margin_left = -467.098
+margin_left = -469.077
 margin_top = 213.485
-margin_right = -222.098
+margin_right = -224.077
 margin_bottom = 290.485
 focus_neighbour_left = NodePath("../Quit_button")
 focus_neighbour_right = NodePath("../Rules_button")
 text = "Lancer une partie"
 start_focused = true
-reference_path = "res://Scenes/GameInterface.tscn"
+reference_path = "res://Scenes/Map.tscn"
 
 [node name="Rules_button" parent="Background" instance=ExtResource( 2 )]
 margin_left = -110.837
