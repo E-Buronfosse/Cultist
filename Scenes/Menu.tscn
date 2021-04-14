@@ -19,7 +19,7 @@ focus_neighbour_left = NodePath("../Quit_button")
 focus_neighbour_right = NodePath("../Rules_button")
 text = "Lancer une partie"
 start_focused = true
-reference_path = "res://Scenes/Map.tscn"
+reference_path = "res://Scenes/GameInterface.tscn"
 
 [node name="Rules_button" parent="Background" instance=ExtResource( 2 )]
 margin_left = -110.837

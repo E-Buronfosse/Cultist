@@ -30,5 +30,3 @@ columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Node2D" type="Node2D" parent="."]

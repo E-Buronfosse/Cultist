@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Card",
 "language": "GDScript",
 "path": "res://Classes/Cards/Card.gd"
+}, {
+"base": "Card",
+"class": "Card_kill",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_kill.gd"
 } ]
 _global_script_class_icons={
-"Card": ""
+"Card": "",
+"Card_kill": ""
 }
 
 [application]
@@ -23,6 +29,10 @@ _global_script_class_icons={
 config/name="Cards"
 run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://GameManager.gd"
 
 [display]
 
