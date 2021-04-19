@@ -6,5 +6,7 @@ func _ready():
 			get_node("Footer_interface/ColorRect/Grid").add_child(Card_kill.new(i, "toto"))
 		else:
 			get_node("Footer_interface/ColorRect/Grid").add_child(Card.new(i, "tata"))
-	
-	
+
+#func _input(event):
+#	if  event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+#		print("lol it works")

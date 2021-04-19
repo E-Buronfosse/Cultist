@@ -1,6 +1,9 @@
 extends Node
 
 onready var Game = get_node("/root/Game")
+onready var cursor_target = load("res://Assets/Cursor/cursor_target.png")
+onready var clicked = false
+onready var clicked_card_name = null
 
 var deck = []
 var rng = RandomNumberGenerator.new()
