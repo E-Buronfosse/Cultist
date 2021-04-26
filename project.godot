@@ -30,10 +30,17 @@ config/name="Cards"
 run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameManager="*res://GameManager.gd"
+
 [display]
 
 window/size/width=1200
 window/size/height=700
+window/vsync/vsync_via_compositor=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

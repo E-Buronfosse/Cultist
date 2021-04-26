@@ -11,6 +11,7 @@ scale = Vector2( 1.0105, 1.04925 )
 texture = ExtResource( 1 )
 
 [node name="Launch_button" parent="Background" instance=ExtResource( 2 )]
+visible = true
 margin_left = -469.077
 margin_top = 213.485
 margin_right = -224.077
@@ -19,9 +20,10 @@ focus_neighbour_left = NodePath("../Quit_button")
 focus_neighbour_right = NodePath("../Rules_button")
 text = "Lancer une partie"
 start_focused = true
-reference_path = "res://Scenes/Map.tscn"
+reference_path = "res://Scenes/GameInterface.tscn"
 
 [node name="Rules_button" parent="Background" instance=ExtResource( 2 )]
+visible = true
 margin_left = -110.837
 margin_top = 213.485
 margin_right = 134.163
@@ -32,6 +34,7 @@ text = "Règles du jeu"
 reference_path = "res://Scenes/Rules.tscn"
 
 [node name="Quit_button" parent="Background" instance=ExtResource( 2 )]
+visible = true
 margin_left = 237.507
 margin_top = 213.485
 margin_right = 482.507

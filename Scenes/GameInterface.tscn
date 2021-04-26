@@ -199,10 +199,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -0.190338
-margin_top = 1.49831
-margin_right = 1200.0
-margin_bottom = 700.0
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 1202.0
+margin_bottom = 416.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -226,19 +226,54 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -300.0
-margin_top = -160.0
-margin_right = 300.0
-margin_bottom = -10.0001
+margin_left = -288.0
+margin_top = -150.0
+margin_right = 721.0
 columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 252, 82 )
+position = Vector2( 306.755, 97.2097 )
 anchor_mode = 0
 current = true
 zoom = Vector2( 0.5, 0.5 )
 script = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="Camera2D"]
+margin_left = 210.0
+margin_top = 296.0
+margin_right = 418.0
+margin_bottom = 340.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/Control"]
+margin_left = -38.0
+margin_right = 462.0
+margin_bottom = 34.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Camera2D/Control/GridContainer"]
+visible = false
+margin_right = 44.0
+margin_bottom = 20.0
+text = "carte"
+
+[node name="Label" type="Label" parent="Camera2D"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 212.0
+margin_right = 332.0
+margin_bottom = 50.0
+text = "52/69
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
