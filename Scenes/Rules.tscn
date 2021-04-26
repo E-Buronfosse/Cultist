@@ -20,5 +20,3 @@ margin_left = 440.0
 margin_top = 400.0
 margin_right = 685.0
 margin_bottom = 477.0
-text = "Go back"
-reference_path = "res://Scenes/Menu.tscn"
