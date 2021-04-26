@@ -12,16 +12,10 @@ _global_script_classes=[ {
 "base": "TextureButton",
 "class": "Card",
 "language": "GDScript",
-"path": "res://Classes/Cards/Card.gd"
-}, {
-"base": "Card",
-"class": "Card_kill",
-"language": "GDScript",
-"path": "res://Classes/Cards/Card_kill.gd"
+"path": "res://Classes/Cards/Cards.gd"
 } ]
 _global_script_class_icons={
-"Card": "",
-"Card_kill": ""
+"Card": ""
 }
 
 [application]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/card-1-3.png-65be9653134289df8aa0574c69f89047.stex"
+path="res://.import/card-kill.png-88c482c9473d35b9b45d2894417a5fbb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cards/Pictures/Characters/card-1-3.png"
-dest_files=[ "res://.import/card-1-3.png-65be9653134289df8aa0574c69f89047.stex" ]
+source_file="res://Assets/Cards/Pictures/Characters/card-kill.png"
+dest_files=[ "res://.import/card-kill.png-88c482c9473d35b9b45d2894417a5fbb.stex" ]
 
 [params]
 

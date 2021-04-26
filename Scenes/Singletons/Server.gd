@@ -22,3 +22,9 @@ func _OnConnectionFailed():
 
 func _OnConnectionSucceeded():
 	print("Successfully connected")
+
+func FetchCardEffect(card_id, requester):
+	rpc_id(1, "FetchCardEffect", card_id, requester)
+
+remote func ReturnEffect(s_effect, requester):
+	instance_from_id(requester).SetEffect(s_effect)
