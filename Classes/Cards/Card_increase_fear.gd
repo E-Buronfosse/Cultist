@@ -1,6 +1,6 @@
 extends Card
 
-class_name Card_kill
+class_name Card_increase_fear
 
 func _ready():
 	pass
@@ -12,7 +12,7 @@ func _init(title, description).(title, description):
 	set_normal_texture(picture)
 
 func _pressed():
-	GameManager.clicked_kill = true
+	GameManager.clicked_increase_fear = true
 	GameManager.clicked_card_name = self.title
 	Input.set_custom_mouse_cursor(GameManager.cursor_target)
 #	var bonhomme = get_tree().get_current_scene().get_node("Map/Level_navigation/Town_folk_man")

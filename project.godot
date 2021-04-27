@@ -15,13 +15,25 @@ _global_script_classes=[ {
 "path": "res://Classes/Cards/Card.gd"
 }, {
 "base": "Card",
+"class": "Card_increase_fear",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_increase_fear.gd"
+}, {
+"base": "Card",
 "class": "Card_kill",
 "language": "GDScript",
 "path": "res://Classes/Cards/Card_kill.gd"
+}, {
+"base": "Node",
+"class": "State_machine",
+"language": "GDScript",
+"path": "res://State_machine.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
-"Card_kill": ""
+"Card_increase_fear": "",
+"Card_kill": "",
+"State_machine": ""
 }
 
 [application]
