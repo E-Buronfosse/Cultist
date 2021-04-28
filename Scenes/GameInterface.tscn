@@ -210,9 +210,9 @@ script = ExtResource( 6 )
 
 [node name="interface" parent="Camera2D" instance=ExtResource( 4 )]
 margin_left = 1.17828
-margin_top = -4.73761
+margin_top = -2.73761
 margin_right = 169.178
-margin_bottom = 105.262
+margin_bottom = 107.262
 script = ExtResource( 1 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
 [connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]

@@ -14,13 +14,13 @@ var a = 0
 var b = 0
 
 var id = 1
-var npc_name = "toto"
-var max_health = 10
-var health = 10
-var fear_veteran = 10
+var npc_name = "theo"
+var max_health = 20
+var health = 2
+var fear_veteran = 2
 var fear_newcomer = 10
-var charisma = 10
-var sect = "veteran"
+var charisma = 1
+var sect = "new"
 
 func _ready():
 	rng.randomize()
