@@ -35,7 +35,7 @@ margin_right = 1198.0
 margin_bottom = 701.0
 
 [node name="PnjDetailStatus" parent="." instance=ExtResource( 3 )]
-margin_left = 973.0
-margin_top = 18.0
-margin_right = 1178.0
-margin_bottom = 126.0
+margin_left = 975.0
+margin_top = 22.0
+margin_right = 1180.0
+margin_bottom = 130.0

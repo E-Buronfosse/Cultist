@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
+[ext_resource path="res://Scripts/Interface.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/stuff/village_tileset_16.png" type="Texture" id=2]
 [ext_resource path="res://Classes/Characters/Town_folk_man.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=4]
@@ -208,8 +209,10 @@ current = true
 script = ExtResource( 6 )
 
 [node name="interface" parent="Camera2D" instance=ExtResource( 4 )]
-margin_left = 0.475159
+margin_left = 1.17828
 margin_top = -4.73761
-margin_right = 168.475
+margin_right = 169.178
 margin_bottom = 105.262
+script = ExtResource( 1 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]

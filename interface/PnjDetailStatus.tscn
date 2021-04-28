@@ -33,9 +33,11 @@ __meta__ = {
 }
 
 [node name="Fear_newcomer" type="Label" parent="."]
-margin_left = 13.9341
+anchor_top = -0.00303537
+anchor_bottom = -0.00303537
+margin_left = 14.0
 margin_top = 38.3278
-margin_right = 171.934
+margin_right = 172.0
 margin_bottom = 52.3278
 text = "Fear_newcomer : 10"
 __meta__ = {

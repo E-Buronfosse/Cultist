@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+
+signal clickDetailPnj(npc_name,health,max_health,fear_veteran,fear_newcomer,charisma,sect)
+
 const SPEED = 40
 var velocity = Vector2()
 var path = []
@@ -10,6 +13,14 @@ onready var screen_size = get_viewport().size
 var a = 0
 var b = 0
 
+var id = 1
+var npc_name = "toto"
+var max_health = 10
+var health = 10
+var fear_veteran = 10
+var fear_newcomer = 10
+var charisma = 10
+var sect = "veteran"
 
 func _ready():
 	rng.randomize()
@@ -46,3 +57,14 @@ func _on_Town_folk_man_input_event(viewport, event, shape_idx):
 	if (event.is_pressed() and event.button_index == BUTTON_LEFT):
 		if GameManager.clicked == true:
 			queue_free()
+
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == BUTTON_LEFT \
+	and event.is_pressed():
+		self.on_click()
+
+func on_click():
+	emit_signal("clickDetailPnj",npc_name,health,max_health,fear_veteran,fear_newcomer,charisma,sect)
+	print("enemies")
+
