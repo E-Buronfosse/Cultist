@@ -199,11 +199,6 @@ shape = SubResource( 8 )
 ] instance=ExtResource( 3 )]
 position = Vector2( 554.149, 262.359 )
 
-[node name="Town_folk_man2" parent="Map/Level_navigation" groups=[
-"Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -1.39832, 3.89783 )
 anchor_mode = 0
@@ -218,4 +213,4 @@ margin_bottom = 107.262
 script = ExtResource( 1 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
 [connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]

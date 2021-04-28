@@ -6,7 +6,7 @@ extends Control
 # var b = "text"
 var pnj
 var pnjCount
-
+var current_pnj = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,13 +17,15 @@ func _ready():
 	$"VBoxContainer/PngDetail /CounterPng".text = "0 / " + str(pnjCount)
 	# Replace 
 	$PnjDetailStatus.visible = false
-	pass # Replace with function body.
+	pass 
+	
+	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+func _on_Town_folk_man_current_pnj():
+	print("toto")
+	current_pnj += 1
+	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)
+	
 func _on_Town_folk_man_clickDetailPnj(npc_name, health, max_health, fear_veteran, fear_newcomer, charisma, sect):
 	$PnjDetailStatus.visible = true
 	$PnjDetailStatus/Npc_name.text ="Name : " + npc_name
