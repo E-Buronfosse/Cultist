@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Graphics/Characters/char_1/Townsfolk_M_Idle_2.png" type="Texture" id=1]
+[ext_resource path="res://interface/counter/label_bg.png" type="Texture" id=2]
+
+[node name="PnjDetailStatus" type="NinePatchRect"]
+margin_left = -1.0
+margin_right = 204.0
+margin_bottom = 108.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 156.708
+margin_top = 31.8005
+margin_right = 196.708
+margin_bottom = 71.8005
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fear_veteran" type="Label" parent="."]
+margin_left = 15.2455
+margin_top = 22.2619
+margin_right = 124.245
+margin_bottom = 36.2619
+text = "Fear_veteran : 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fear_newcomer" type="Label" parent="."]
+margin_left = 13.9341
+margin_top = 38.3278
+margin_right = 171.934
+margin_bottom = 52.3278
+text = "Fear_newcomer : 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Npc_name" type="Label" parent="."]
+margin_left = 15.8682
+margin_top = 4.9341
+margin_right = 123.868
+margin_bottom = 18.9341
+text = "Npc_name : theo"
+
+[node name="Health" type="Label" parent="."]
+margin_left = 14.0971
+margin_top = 55.405
+margin_right = 111.097
+margin_bottom = 69.405
+text = "health : 10 / 10"
+
+[node name="Charisma" type="Label" parent="."]
+margin_left = 14.0971
+margin_top = 71.797
+margin_right = 121.097
+margin_bottom = 85.797
+text = "charisma : 10/20"
+
+[node name="Sect" type="Label" parent="."]
+margin_left = 14.9835
+margin_top = 86.6557
+margin_right = 101.984
+margin_bottom = 100.656
+text = "sect : veteran"
+__meta__ = {
+"_edit_use_anchors_": false
+}
