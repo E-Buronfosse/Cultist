@@ -4,10 +4,18 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var pnj
+var pnjCount
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# var b = "text"
+	pnj = get_tree().get_nodes_in_group("Pnj")
+	pnjCount = pnj.size()
+	print(pnjCount)
+	$"VBoxContainer/PngDetail /CounterPng".text = "0 / " + str(pnjCount)
+	# Replace 
 	$PnjDetailStatus.visible = false
 	pass # Replace with function body.
 

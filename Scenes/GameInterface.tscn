@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Interface.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/stuff/village_tileset_16.png" type="Texture" id=2]
@@ -6,10 +6,6 @@
 [ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Poissonerie.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=6]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-"
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -159,7 +155,6 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 radius = 107.044
 
 [node name="GameInterface" type="Node2D"]
-script = SubResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
@@ -199,7 +194,14 @@ script = ExtResource( 5 )
 position = Vector2( 423.995, 223.076 )
 shape = SubResource( 8 )
 
-[node name="Town_folk_man" parent="Map/Level_navigation" instance=ExtResource( 3 )]
+[node name="Town_folk_man" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
+position = Vector2( 554.149, 262.359 )
+
+[node name="Town_folk_man2" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
 position = Vector2( 554.149, 262.359 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -216,3 +218,4 @@ margin_bottom = 107.262
 script = ExtResource( 1 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
 [connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
