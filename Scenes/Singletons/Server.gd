@@ -1,14 +1,21 @@
 extends Node
 
 var network = NetworkedMultiplayerENet.new()
-var ip = "192.168.56.1" #Server IP ADDRESS of connecion
+var nick = "Player"
+var ip = "127.0.0.1" #Server IP ADDRESS of connecion
 #var ip = "192.168.56.1" = Anthony's IP
 var port = 25565 #port default to 1909
 
 func _ready():
-	ConnectToServer()
+	pass
+
+func SetInfo(ip, port, nick):
+	self.ip = ip
+	self.port = port
+	self.nick = nick
 
 func ConnectToServer():
+	print("toast")
 	network.create_client(ip, port)
 	get_tree().set_network_peer(network)
 	

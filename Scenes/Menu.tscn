@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Graphics/menu_bg.jpg" type="Texture" id=1]
-[ext_resource path="res://Elements/Menu_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Lobby_Button.tscn" type="PackedScene" id=2]
 
 [node name="Menu" type="Node2D"]
 
@@ -18,8 +18,16 @@ margin_bottom = 290.485
 focus_neighbour_left = NodePath("../Quit_button")
 focus_neighbour_right = NodePath("../Rules_button")
 text = "Lancer une partie"
-start_focused = true
-reference_path = "res://Scenes/GameInterface.tscn"
+reference_path = "res://Scenes/Game.tscn"
+
+[node name="Lobby_button" parent="Background" instance=ExtResource( 2 )]
+margin_left = -109.029
+margin_top = 104.278
+margin_right = 135.971
+margin_bottom = 181.278
+focus_neighbour_left = NodePath("../Quit_button")
+focus_neighbour_right = NodePath("../Rules_button")
+reference_path = "res://Scenes/Lobby.tscn"
 
 [node name="Rules_button" parent="Background" instance=ExtResource( 2 )]
 margin_left = -110.837
@@ -32,9 +40,9 @@ text = "Règles du jeu"
 reference_path = "res://Scenes/Rules.tscn"
 
 [node name="Quit_button" parent="Background" instance=ExtResource( 2 )]
-margin_left = 237.507
+margin_left = 240.306
 margin_top = 213.485
-margin_right = 482.507
+margin_right = 485.306
 margin_bottom = 290.485
 focus_neighbour_left = NodePath("../Rules_button")
 focus_neighbour_right = NodePath("../Launch_button")

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Themes/Selected_button.tres" type="StyleBox" id=1]
 [ext_resource path="res://Themes/Non_selected_button.tres" type="StyleBox" id=2]
-[ext_resource path="res://Elements/Menu_button.gd" type="Script" id=3]
+[ext_resource path="res://Elements/Lobby_Button.gd" type="Script" id=3]
 
 [node name="Button" type="Button"]
 margin_left = -1.33484
@@ -12,6 +12,7 @@ custom_styles/hover = ExtResource( 1 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/focus = ExtResource( 1 )
 custom_styles/normal = ExtResource( 2 )
+text = "Lobby"
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
