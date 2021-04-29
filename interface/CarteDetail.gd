@@ -1,8 +1,8 @@
 extends NinePatchRect
 
 func _ready():
-	for i in GameManager.deck:
-		if i == "1-3":
-			get_node("GridCart").add_child(Card_kill.new(i, "toto"))
-		else:
-			get_node("GridCart").add_child(Card.new(i, "tata"))
+	for i in GameManager.hand_player_new:
+		var new_card = load("res://Classes/Cards/Card_"+i+".gd")
+		get_node("GridCart").add_child(new_card.new())
+#		else:
+#			get_node("GridCart").add_child(Card.new(i))

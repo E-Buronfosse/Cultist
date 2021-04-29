@@ -1,0 +1,15 @@
+{
+	"cards": [
+		{
+			"Intimidation" : {
+				"amount": 5
+			},
+			"Reaper_Time" : {
+				"amount": 5
+			},
+			"Preacher" : {
+				"amount": 5
+			}
+		}
+	]
+}

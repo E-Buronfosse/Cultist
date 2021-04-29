@@ -199,6 +199,26 @@ shape = SubResource( 7 )
 ] instance=ExtResource( 3 )]
 position = Vector2( 554.149, 262.359 )
 
+[node name="Town_folk_man2" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
+position = Vector2( 554.149, 262.359 )
+
+[node name="Town_folk_man3" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
+position = Vector2( 554.149, 262.359 )
+
+[node name="Town_folk_man4" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
+position = Vector2( 554.149, 262.359 )
+
+[node name="Town_folk_man5" parent="Map/Level_navigation" groups=[
+"Pnj",
+] instance=ExtResource( 3 )]
+position = Vector2( 554.149, 262.359 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -1.39832, 3.89783 )
 anchor_mode = 0
@@ -214,3 +234,11 @@ script = ExtResource( 6 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
 [connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
 [connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man3" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man3" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man4" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man4" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man5" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man5" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]

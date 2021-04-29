@@ -58,9 +58,14 @@ func move():
 
 func _on_Town_folk_man_input_event(viewport, event, shape_idx):
 	if (event.is_pressed() and event.button_index == BUTTON_LEFT):
-		if GameManager.clicked == true:
+		if GameManager.clicked == true and GameManager.clicked_card_name == "Reaper_Time":
 			queue_free()
 			emit_signal("current_pnj")
+		if GameManager.clicked == true and GameManager.clicked_card_name == "Intimidation":
+			fear_newcomer += 50
+			print(fear_newcomer)
+		GameManager.clicked = false
+		Input.set_custom_mouse_cursor(null)
 			
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \

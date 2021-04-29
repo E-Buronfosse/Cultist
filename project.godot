@@ -15,9 +15,29 @@ _global_script_classes=[ {
 "path": "res://Classes/Cards/Card.gd"
 }, {
 "base": "Card",
+"class": "Card_Intimidation",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_Intimidation.gd"
+}, {
+"base": "Card",
+"class": "Card_Preacher",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_Preacher.gd"
+}, {
+"base": "Card",
+"class": "Card_Reaper_Time",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_Reaper_Time.gd"
+}, {
+"base": "Card",
 "class": "Card_kill",
 "language": "GDScript",
 "path": "res://Classes/Cards/Card_kill.gd"
+}, {
+"base": "Node",
+"class": "Deck",
+"language": "GDScript",
+"path": "res://Deck.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Villager",
@@ -26,7 +46,11 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Card": "",
+"Card_Intimidation": "",
+"Card_Preacher": "",
+"Card_Reaper_Time": "",
 "Card_kill": "",
+"Deck": "",
 "Villager": ""
 }
 
