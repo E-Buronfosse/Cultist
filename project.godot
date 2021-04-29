@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Card_kill",
 "language": "GDScript",
 "path": "res://Classes/Cards/Card_kill.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Villager",
+"language": "GDScript",
+"path": "res://Scripts/Entitié/Villager.gd"
 } ]
 _global_script_class_icons={
 "Card": "",
-"Card_kill": ""
+"Card_kill": "",
+"Villager": ""
 }
 
 [application]

@@ -24,7 +24,6 @@ var fear_newcomer = 10
 var charisma = 1
 var sect = "new"
 
-
 func _ready():
 	rng.randomize()
 	close_position = Vector2(global_position.x +  rng.randf_range(-100.0, 100.0), global_position.y + rng.randf_range(-100.0, 100.0))

@@ -24,6 +24,7 @@ func _ready():
 func _on_Town_folk_man_current_pnj():
 	print("toto")
 	current_pnj += 1
+	$PnjDetailStatus.visible = false
 	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)
 	
 func _on_Town_folk_man_clickDetailPnj(npc_name, health, max_health, fear_veteran, fear_newcomer, charisma, sect):
