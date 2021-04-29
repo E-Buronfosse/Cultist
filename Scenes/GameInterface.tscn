@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Scripts/mainVillage/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Graphics/stuff/village_tileset_16.png" type="Texture" id=2]
-[ext_resource path="res://Classes/Characters/Town_folk_man.tscn" type="PackedScene" id=3]
 [ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Poissonerie.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/interface/Interface.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Entities/Villager.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -194,30 +194,30 @@ script = ExtResource( 5 )
 position = Vector2( 423.995, 223.076 )
 shape = SubResource( 7 )
 
-[node name="Town_folk_man" parent="Map/Level_navigation" groups=[
+[node name="Villager" parent="Map/Level_navigation" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
+] instance=ExtResource( 7 )]
+position = Vector2( 265.633, 331.04 )
 
-[node name="Town_folk_man2" parent="Map/Level_navigation" groups=[
+[node name="Villager2" parent="Map/Level_navigation" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
+] instance=ExtResource( 7 )]
+position = Vector2( 265.633, 331.04 )
 
-[node name="Town_folk_man3" parent="Map/Level_navigation" groups=[
+[node name="Villager3" parent="Map/Level_navigation" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
+] instance=ExtResource( 7 )]
+position = Vector2( 265.633, 331.04 )
 
-[node name="Town_folk_man4" parent="Map/Level_navigation" groups=[
+[node name="Villager4" parent="Map/Level_navigation" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
+] instance=ExtResource( 7 )]
+position = Vector2( 265.633, 331.04 )
 
-[node name="Town_folk_man5" parent="Map/Level_navigation" groups=[
+[node name="Villager5" parent="Map/Level_navigation" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 554.149, 262.359 )
+] instance=ExtResource( 7 )]
+position = Vector2( 265.633, 331.04 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -1.39832, 3.89783 )
@@ -232,13 +232,18 @@ margin_right = 169.178
 margin_bottom = 107.262
 script = ExtResource( 6 )
 [connection signal="body_entered" from="Map/Level_navigation/Poissonerie" to="Map/Level_navigation/Poissonerie" method="_on_Poissonerie_body_entered"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man2" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man3" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man3" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man4" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man4" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
-[connection signal="clickDetailPnj" from="Map/Level_navigation/Town_folk_man5" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Map/Level_navigation/Town_folk_man5" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Villager" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Villager" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="input_event" from="Map/Level_navigation/Villager" to="Map/Level_navigation/Villager" method="_on_Villager_input_event"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Villager2" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Villager2" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="input_event" from="Map/Level_navigation/Villager2" to="Map/Level_navigation/Villager2" method="_on_Villager_input_event"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Villager3" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Villager3" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="input_event" from="Map/Level_navigation/Villager3" to="Map/Level_navigation/Villager3" method="_on_Villager_input_event"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Villager4" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Villager4" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="input_event" from="Map/Level_navigation/Villager4" to="Map/Level_navigation/Villager4" method="_on_Villager_input_event"]
+[connection signal="clickDetailPnj" from="Map/Level_navigation/Villager5" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Map/Level_navigation/Villager5" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="input_event" from="Map/Level_navigation/Villager5" to="Map/Level_navigation/Villager5" method="_on_Villager_input_event"]

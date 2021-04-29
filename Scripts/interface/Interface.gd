@@ -36,3 +36,22 @@ func _on_Town_folk_man_clickDetailPnj(npc_name, health, max_health, fear_veteran
 	$PnjDetailStatus/Charisma.text ="Charisma : " + str(charisma)
 	$PnjDetailStatus/Sect.text ="Sect : " + sect
 	pass
+
+
+func _on_Villager_clickDetailPnj(npc_name, health, max_health, fear_veteran, fear_newcomer, charisma, sect):
+	$PnjDetailStatus.visible = true
+	$PnjDetailStatus/Npc_name.text ="Name : " + npc_name
+	$PnjDetailStatus/Fear_veteran.text ="Fear veteran : " + str(fear_veteran)
+	$PnjDetailStatus/Fear_newcomer.text ="Fear newcomer : " + str(fear_newcomer)
+	$PnjDetailStatus/Health.text ="Health : " + str(health) + "/" + str(max_health)
+	$PnjDetailStatus/Charisma.text ="Charisma : " + str(charisma)
+	$PnjDetailStatus/Sect.text ="Sect : " + sect
+	pass
+
+
+func _on_Villager_current_pnj():
+	print("toto")
+	pnjCount -= 1
+#	$PnjDetailStatus.visible = false
+	$PnjDetailStatus.visible = false
+	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)

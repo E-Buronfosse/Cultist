@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/mainVillage/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Map/MapVillage.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Classes/Characters/Town_folk_man.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/Entitié/Villager.gd" type="Script" id=4]
 [ext_resource path="res://interface/Interface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/interface/Interface.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Entities/Villager.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0.354477, -0.0846863, 3641.14, 9.98584, 3664.17, 2285.91, -8.77319, 2301.26 )
@@ -21,15 +20,30 @@ outlines = [ PoolVector2Array( 0.354477, -0.0846863, 3641.14, 9.98584, 3664.17, 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
 
-[node name="Town_folk_man" parent="Navigation2D" groups=[
+[node name="Villager" parent="Navigation2D" groups=[
 "Pnj",
-] instance=ExtResource( 3 )]
-position = Vector2( 409.729, 229.968 )
-script = ExtResource( 4 )
+] instance=ExtResource( 7 )]
+position = Vector2( 536.726, 352.778 )
+
+[node name="Villager2" parent="Navigation2D" groups=[
+"Pnj",
+] instance=ExtResource( 7 )]
+position = Vector2( 665.42, 399.447 )
+
+[node name="Villager3" parent="Navigation2D" groups=[
+"Pnj",
+] instance=ExtResource( 7 )]
+position = Vector2( 463.187, 265.097 )
+
+[node name="Villager4" parent="Navigation2D" groups=[
+"Pnj",
+] instance=ExtResource( 7 )]
+position = Vector2( 833.711, 344.293 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 current = true
 limit_left = 0
 limit_top = 0
@@ -41,5 +55,11 @@ script = ExtResource( 1 )
 margin_right = 0.0
 margin_bottom = 0.0
 script = ExtResource( 6 )
-[connection signal="clickDetailPnj" from="Navigation2D/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_clickDetailPnj"]
-[connection signal="current_pnj" from="Navigation2D/Town_folk_man" to="Camera2D/interface" method="_on_Town_folk_man_current_pnj"]
+[connection signal="clickDetailPnj" from="Navigation2D/Villager" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Navigation2D/Villager" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="clickDetailPnj" from="Navigation2D/Villager2" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Navigation2D/Villager2" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="clickDetailPnj" from="Navigation2D/Villager3" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Navigation2D/Villager3" to="Camera2D/interface" method="_on_Villager_current_pnj"]
+[connection signal="clickDetailPnj" from="Navigation2D/Villager4" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
+[connection signal="current_pnj" from="Navigation2D/Villager4" to="Camera2D/interface" method="_on_Villager_current_pnj"]

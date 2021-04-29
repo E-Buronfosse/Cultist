@@ -64,14 +64,16 @@ func _on_Town_folk_man_input_event(viewport, event, shape_idx):
 		if GameManager.clicked == true and GameManager.clicked_card_name == "Intimidation":
 			fear_newcomer += 50
 			print(fear_newcomer)
+		else:
+			on_click()
 		GameManager.clicked = false
 		Input.set_custom_mouse_cursor(null)
 			
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
-	and event.is_pressed():
-		self.on_click()
+#func _input_event(viewport, event, shape_idx):
+#	if event is InputEventMouseButton \
+#	and event.button_index == BUTTON_LEFT \
+#	and event.is_pressed():
+#		self.on_click()
 
 func on_click():
 	emit_signal("clickDetailPnj",npc_name,health,max_health,fear_veteran,fear_newcomer,charisma,sect)
