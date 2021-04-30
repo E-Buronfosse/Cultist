@@ -14,7 +14,6 @@ var both
 
 func _ready():
 	list_cards = Deck.new().get_from_deck()
-	print(list_cards)
 	rng.randomize()
 	fill_deck()
 
@@ -29,7 +28,6 @@ func fill_deck():
 	randomize()
 	deck.shuffle()
 	create_hand(deck)
-	print(deck)
 	
 func create_hand(deck):
 	for card in range(5):

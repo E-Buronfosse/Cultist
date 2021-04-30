@@ -4,6 +4,7 @@ class_name Villager
 
 signal clickDetailPnj(npc_name,health,max_health,fear_veteran,fear_newcomer,charisma,sect)
 signal current_pnj
+signal change_cult
 
 const SPEED = 80
 var collision = Vector2()
@@ -51,16 +52,6 @@ func _ready():
 	timer.set_wait_time( 5.75 )
 	close_position = Vector2(global_position.x +  rng.randf_range(-100.0, 100.0), global_position.y + rng.randf_range(-100.0, 100.0))
 
-#func gnrt(dict):
-#	self.home = ServerData.homes[dict["home"]]
-#	self.npc_name = dict["name"]
-#	self.health = dict["health"]
-#	self.max_health = self.health
-#	self.fear_veteran = dict["default_fear_veteran"]
-#	self.fear_newcomer = dict["default_fear_newcomer"]
-#	self.charisma = dict["charisma"]
-#	self.sect = dict["sect"]
-#	print(self.npc_name + " : " + self.sect)
 
 func generate_path():
 	path = level_navigation.get_simple_path(global_position, close_position, true)
@@ -83,29 +74,6 @@ func check_collision():
 	
 func move(delta):
 	collision = move_and_collide(collision * delta)
-#	if collision:
-#		a = rng.randf_range(-100.0, 100.0)
-#		b = rng.randf_range(-100.0, 100.0)
-#		self.close_position = Vector2(global_position.x +  a, global_position.y + b)
-#		if "Villager" in collision.collider.name:
-#			print("ceci est une collision")
-			
-#			var colliding_vil = get_node("../"+collision.collider.name)
-#			if colliding_vil.state != DISCUSSING:
-#				self.state = DISCUSSING
-#				colliding_vil.state = DISCUSSING
-#			else:
-#				a = rng.randf_range(-100.0, 100.0)
-#				b = rng.randf_range(-100.0, 100.0)
-#				self.close_position = Vector2(global_position.x +  a, global_position.y + b)
-#		else:
-#			a = rng.randf_range(-100.0, 100.0)
-#			b = rng.randf_range(-100.0, 100.0)
-#			self.close_position = Vector2(global_position.x +  a, global_position.y + b)
-#		while global_position.x + a > screen_size.x || global_position.x + a < 0:
-#			a = rng.randf_range(-100.0, 100.0)
-#		while global_position.y + b > screen_size.y || global_position.y + b < 0:
-#			b = rng.randf_range(-100.0, 100.0)
 	
 func check_global_pos(close_position):
 	if global_position.distance_to(close_position) < 5:
@@ -116,20 +84,10 @@ func check_global_pos(close_position):
 			self.close_position = Vector2(global_position.x +  a, global_position.y + b)
 		else:
 			state = IDLE
-#	elif collision:
-#		if "Villager" in collision.collider.name:
-#			print("collision of "+ String(collision.collider.name))
-#			var colliding_vil = get_node("../"+collision.collider.name)
-#			if colliding_vil.state != DISCUSSING:
-#				state = DISCUSSING
-#		a = rng.randf_range(-100.0, 100.0)
-#		b = rng.randf_range(-100.0, 100.0)
-#		self.close_position = Vector2(global_position.x +  a, global_position.y + b)
 	
 	
 func _physics_process(delta):
 	check_collision()
-	print(timer.time_left)
 	match state:
 		IDLE:
 			animated_sprite.animation = "idle"
@@ -155,7 +113,6 @@ func _physics_process(delta):
 			
 func on_click():
 	emit_signal("clickDetailPnj",npc_name,health,max_health,fear_veteran,fear_newcomer,charisma,sect)
-	print("enemies")
 
 
 func _on_Town_folk_man_input_event(viewport, event, shape_idx):
@@ -165,15 +122,11 @@ func _on_Town_folk_man_input_event(viewport, event, shape_idx):
 			emit_signal("current_pnj")
 		if GameManager.clicked == true and GameManager.clicked_card_name == "Intimidation":
 			fear_newcomer += 50
-			print(fear_newcomer)
+		if GameManager.clicked == true and GameManager.clicked_card_name == "Conversion":
+			sect = "ancient"
+			emit_signal("change_cult")
 		else:
 			on_click()
 		GameManager.clicked = false
 		Input.set_custom_mouse_cursor(null)
-#		if GameManager.clicked_kill == true:
-#			queue_free()
-#			GameManager.team.erase(self)
-#		elif GameManager.clicked_increase_fear == true:
-#			self.fear += 50
-#			print(fear)
 

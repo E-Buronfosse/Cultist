@@ -55,6 +55,7 @@ script = ExtResource( 1 )
 margin_right = 0.0
 margin_bottom = 0.0
 script = ExtResource( 6 )
+[connection signal="change_cult" from="Navigation2D/Villager" to="Camera2D/interface" method="_on_Villager_change_cult"]
 [connection signal="clickDetailPnj" from="Navigation2D/Villager" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]
 [connection signal="current_pnj" from="Navigation2D/Villager" to="Camera2D/interface" method="_on_Villager_current_pnj"]
 [connection signal="clickDetailPnj" from="Navigation2D/Villager2" to="Camera2D/interface" method="_on_Villager_clickDetailPnj"]

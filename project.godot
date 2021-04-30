@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://Classes/Cards/Card.gd"
 }, {
 "base": "Card",
+"class": "Card_Conversion",
+"language": "GDScript",
+"path": "res://Classes/Cards/Card_Conversion.gd"
+}, {
+"base": "Card",
 "class": "Card_Intimidation",
 "language": "GDScript",
 "path": "res://Classes/Cards/Card_Intimidation.gd"
@@ -46,6 +51,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Card": "",
+"Card_Conversion": "",
 "Card_Intimidation": "",
 "Card_Preacher": "",
 "Card_Reaper_Time": "",

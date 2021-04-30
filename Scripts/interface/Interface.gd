@@ -13,16 +13,13 @@ func _ready():
 	# var b = "text"
 	pnj = get_tree().get_nodes_in_group("Pnj")
 	pnjCount = pnj.size()
-	print(pnjCount)
 	$"VBoxContainer/PngDetail /CounterPng".text = "0 / " + str(pnjCount)
 	# Replace 
 	$PnjDetailStatus.visible = false
-	pass 
 	
 	
 
 func _on_Town_folk_man_current_pnj():
-	print("toto")
 	current_pnj += 1
 	$PnjDetailStatus.visible = false
 	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)
@@ -35,7 +32,6 @@ func _on_Town_folk_man_clickDetailPnj(npc_name, health, max_health, fear_veteran
 	$PnjDetailStatus/Health.text ="Health : " + str(health) + "/" + str(max_health)
 	$PnjDetailStatus/Charisma.text ="Charisma : " + str(charisma)
 	$PnjDetailStatus/Sect.text ="Sect : " + sect
-	pass
 
 
 func _on_Villager_clickDetailPnj(npc_name, health, max_health, fear_veteran, fear_newcomer, charisma, sect):
@@ -46,12 +42,14 @@ func _on_Villager_clickDetailPnj(npc_name, health, max_health, fear_veteran, fea
 	$PnjDetailStatus/Health.text ="Health : " + str(health) + "/" + str(max_health)
 	$PnjDetailStatus/Charisma.text ="Charisma : " + str(charisma)
 	$PnjDetailStatus/Sect.text ="Sect : " + sect
-	pass
 
 
 func _on_Villager_current_pnj():
-	print("toto")
 	pnjCount -= 1
-#	$PnjDetailStatus.visible = false
 	$PnjDetailStatus.visible = false
+	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)
+
+
+func _on_Villager_change_cult():
+	current_pnj += 1
 	$"VBoxContainer/PngDetail /CounterPng".text = str(current_pnj) + " / " + str(pnjCount)

@@ -9,6 +9,9 @@
 			},
 			"Preacher" : {
 				"amount": 5
+			},
+			"Conversion" : {
+				"amount": 5
 			}
 		}
 	]

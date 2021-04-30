@@ -5,7 +5,7 @@ class_name Deck
 var deck = []
 
 func _ready():
-	pass # Replace with function body.
+	pass 
 	
 	
 func get_from_deck():
@@ -15,7 +15,5 @@ func get_from_deck():
 	deck_data_file.close()
 	var deck_data = deck_data_json.result
 	var cards = deck_data["cards"][0]
-#	print("cards")
-#	print(cards)
 	return cards
 
